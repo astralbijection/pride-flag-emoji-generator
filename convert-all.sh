@@ -7,6 +7,6 @@ echo 'Created emojis: '
 ls out/*.png | xargs basename -s .png | sed 's/.*/\:&\:/' | tr '\n' ' ' | xargs echo
 
 EXPORT_ZIP=emojis.zip
-zip $EXPORT_ZIP out
+zip $EXPORT_ZIP out/*.png
 echo 'Created zip file' $EXPORT_ZIP
 
