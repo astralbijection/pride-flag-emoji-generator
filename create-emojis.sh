@@ -9,6 +9,7 @@ OUT_FLAG="$OUT_DIR/${NAME}_flag.png"
 OUT_HEART="$OUT_DIR/${NAME}_heart.png"
 OUT_MIDDLE="$OUT_DIR/${NAME}_middle.png"
 OUT_EGG="$OUT_DIR/${NAME}_egg.png"
+OUT_100="$OUT_DIR/${NAME}_100.png"
 
 mkdir -p /tmp/pride-flag-emoji-rescaled
 
@@ -27,5 +28,8 @@ composite -compose Dst_In middle_mask.png $IN_SCL -alpha Set $OUT_MIDDLE
 
 echo Generating $OUT_EGG
 composite -compose Dst_In egg_mask.png $IN_SCL -alpha Set $OUT_EGG
+
+echo Generating $OUT_100
+composite -compose Dst_In 100_mask.png $IN_SCL -alpha Set $OUT_100
 
 echo Finished processing $NAME
